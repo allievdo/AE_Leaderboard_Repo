@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
         startTime = Time.time;
         isPlaying = true;
         playButton.SetActive(false);
+        Debug.Log("Game is playing");
     }
 
     void End ()
