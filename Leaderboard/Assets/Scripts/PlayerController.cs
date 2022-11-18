@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private int collectabledPicked;
     public int maxCollectables = 10;
 
+    public AudioSource audioPlayer;
+
     public GameObject playButton;
     public TextMeshProUGUI curTimeText;
 
@@ -59,6 +61,7 @@ public class PlayerController : MonoBehaviour
         {
             collectabledPicked++;
             Destroy(other.gameObject);
+            audioPlayer.Play();
 
             if (collectabledPicked == maxCollectables)
                 End();
